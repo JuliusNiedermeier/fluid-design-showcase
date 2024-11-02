@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { gray } from "tailwindcss/colors";
 
 const config: Config = {
   content: [
@@ -7,10 +8,13 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      tablet: "600px",
+      desktop: "1200px",
+    },
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      borderColor: {
+        DEFAULT: gray[400],
       },
     },
   },

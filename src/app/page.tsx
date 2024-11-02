@@ -1,101 +1,138 @@
+import {
+  ArrowRightIcon,
+  ComponentIcon,
+  FullscreenIcon,
+  MonitorIcon,
+  PlayIcon,
+  SmartphoneIcon,
+  TabletIcon,
+  TangentIcon,
+} from "lucide-react";
 import Image from "next/image";
+
+import graphicImage from "../../public/graphic.png";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="mx-16 border-x p-8">
+        <div className="flex gap-1 items-end">
+          <div className="aspect-square w-4 mb-px bg-blue-600" />
+          <span className="text-xl font-bold leading-none">21</span>
+          <span className="opacity-50 leading-none">Studio</span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <div className="border-t px-16">
+        <div className="border-x grid grid-cols-3">
+          <div className="p-8 border-r flex flex-col gap-4 bg-violet-100 tablet:bg-emerald-100 desktop:bg-orange-100">
+            <div className="hidden desktop:flex py-2 px-4 items-center gap-2 bg-neutral-900 w-fit rounded-full ring-[0.25rem] ring-neutral-900/10">
+              <MonitorIcon className="size-4 text-neutral-100" />
+              <span className="text-neutral-300 text-sm font-medium">
+                Desktop
+              </span>
+            </div>
+
+            <div className="hidden tablet:flex desktop:hidden py-2 px-4 items-center gap-2 bg-neutral-900 w-fit rounded-full ring-[0.25rem] ring-neutral-900/10">
+              <TabletIcon className="size-4 text-neutral-100" />
+              <span className="text-neutral-300 text-sm font-medium">
+                Tablet
+              </span>
+            </div>
+
+            <div className="tablet:hidden flex py-2 px-4 items-center gap-2 bg-neutral-900 w-fit rounded-full ring-[0.25rem] ring-neutral-900/10">
+              <SmartphoneIcon className="size-4 text-neutral-100" />
+              <span className="text-neutral-300 text-sm font-medium">
+                Mobile
+              </span>
+            </div>
+
+            <h1 className="text-3xl font-bold mt-auto">Fluid responsive</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore,
+              quasi unde harum consequuntur explicabo, blanditiis tempora dolor
+              recusandae beatae eum nihil quam earum sapiente error, eius
+              perspiciatis obcaecati autem rem.
+            </p>
+          </div>
+          <div className="p-8 col-span-2 group hover:bg-neutral-100 saturate-50 hover:saturate-100 transition-all cursor-pointer">
+            <div className="relative bg-neutral-200 aspect-video grid place-content-center">
+              <Image
+                src={graphicImage}
+                fill
+                alt=""
+                className="object-cover rounded-xl"
+                placeholder="blur"
+              />
+              <div className="p-8 rounded-full bg-white relative group-hover:bg-black group-hover:text-white">
+                <PlayIcon className="w-6" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="border-t px-16">
+        <div className="border-x grid grid-cols-3">
+          <div className="p-8 border-r hover:bg-neutral-100 cursor-pointer">
+            <div className="flex gap-4 items-center">
+              <FullscreenIcon className="w-6 shrink-0" />
+              <h3 className="text-xl font-medium">
+                Get control over your layouts.
+              </h3>
+            </div>
+            <p className="mt-2">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Perspiciatis illo debitis atque similique nesciunt, eaque ipsam
+              esse, iste ex, pariatur nemo incidunt explicabo eos rem ab
+              perferendis vel delectus non!
+            </p>
+            <div className="mt-8 flex gap-3 items-center">
+              <span className="font-medium">Learn more</span>
+              <ArrowRightIcon className="w-6 shrink-0" />
+            </div>
+          </div>
+          <div className="p-8 border-r hover:bg-neutral-100 cursor-pointer">
+            <div className="flex gap-4 items-center">
+              <ComponentIcon className="w-6 shrink-0" />
+              <h3 className="text-xl font-medium">
+                Get control over your layouts.
+              </h3>
+            </div>
+            <p className="mt-2">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Perspiciatis illo debitis atque similique nesciunt, eaque ipsam
+              esse, iste ex, pariatur nemo incidunt explicabo eos rem ab
+              perferendis vel delectus non!
+            </p>
+            <div className="mt-8 flex gap-3 items-center">
+              <span className="font-medium">Learn more</span>
+              <ArrowRightIcon className="w-6 shrink-0" />
+            </div>
+          </div>
+          <div className="p-8 hover:bg-neutral-100 cursor-pointer">
+            <div className="flex gap-4 items-center">
+              <TangentIcon className="w-6 shrink-0" />
+              <h3 className="text-xl font-medium">
+                Get control over your layouts.
+              </h3>
+            </div>
+            <p className="mt-2">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Perspiciatis illo debitis atque similique nesciunt, eaque ipsam
+              esse, iste ex, pariatur nemo incidunt explicabo eos rem ab
+              perferendis vel delectus non!
+            </p>
+            <div className="mt-8 flex gap-3 items-center">
+              <span className="font-medium">Learn more</span>
+              <ArrowRightIcon className="w-6 shrink-0" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="border-t px-16">
+        <div className="border-x p-8">
+          <span>All rights reserved.</span>
+        </div>
+      </div>
+    </>
   );
 }
